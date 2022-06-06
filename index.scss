@@ -1,0 +1,38 @@
+$inst-bg: #fff;
+$inst-fg: invert($inst-bg);
+$inst-bg-hover: #f00;
+$inst-fg-hover: invert($inst-bg-hover);
+$inst-child-bg-hover: #0f0;
+$inst-child-fg-hover: invert($inst-child-bg-hover);
+$inst-child-child-bg-hover: #00f;
+$inst-child-child-fg-hover: invert($inst-child-child-bg-hover);
+
+.inst {
+	background: $inst-bg;
+	color: $inst-fg;
+
+	&, span {
+		border: 1px solid transparent;
+	}
+
+	&:hover {
+		background: $inst-bg-hover;
+		color: $inst-fg-hover;
+	}
+
+	> span:hover {
+		background: $inst-child-bg-hover;
+		color: $inst-child-fg-hover;
+
+		> span:hover {
+			background: $inst-child-child-bg-hover;
+			color: $inst-child-child-fg-hover;
+		}
+	}
+
+}
+
+.scary {
+	background: $inst-bg-hover;
+	color: $inst-fg-hover;
+}
